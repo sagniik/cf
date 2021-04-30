@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForces</title>
+    <style>
+        body {
+            background-image: url("vecteezy_digital-cyberspace-with-digital-data-network-connections_1971012.jpg");
+            margin: none;
+            padding: none;
+        }
+
+        .navbar {
+            background-color: #2d2424;
+            border-radius: 5px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        .navbar li a {
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            color: red;
+        }
+
+        .search {
+            float: right;
+            color: white;
+            padding: 15px;
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+        .CF {
+            text-align: center;
+        }
+
+        .hi h1 {
+            font-size: 5em;
+            line-height: 1.3em;
+            margin-top: .2em;
+        }
+
+        .container span {
+            color: #e81111;
+        }
+
+        .searchc {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 30px;
+            background: #fff;
+            display: flex;
+            padding-left: 7px;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 20px;
+            gap: 1%;
+        }
+
+        .input {
+            border: none;
+            outline: none;
+            width: 90%;
+        }
+
+        .input:focus {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+        }
+
+        .search-container {
+            width: 380px;
+            margin: 50px auto;
+            text-align: center;
+            position: relative;
+
+            background: #fff;
+            display: flex;
+            padding-left: 7px;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 40px;
+            gap: 1%;
+        }
+
+        .sc {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .sc--text {
+            font: bold 20px;
+            color: black;
+            transition: all 0.2s;
+        }
+
+        .sc--loading .sc--text {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .sc--loading::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 4px solid transparent;
+            border-top-color: black;
+            border-radius: 50%;
+            animation: sc-loading-spinner 1s ease infinite;
+        }
+
+        @keyframes sc-loading-spinner {
+            from {
+                transform: rotate(0turn);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+
+
+
+        .profile {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.438);
+            margin-top: 40px;
+            border-radius: 10px;
+            font-family: 'Ubuntu Mono';
+            overflow: hidden;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            padding: 1em;
+            font-weight: bold;
+        }
+
+        .bimg {
+            background-image: url("vecteezy_digital-cyberspace-with-digital-data-network-connections_1971012.jpg");
+            background-color: #cccccc;
+            height: 840px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+        }
+
+
+
+
+
+        @media only screen and (max-width:800px) {
+
+            /* For tablets: */
+            .main {
+                width: 80%;
+                padding: 0;
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        @media only screen and (max-width:500px) {
+
+            /* For mobile phones: */
+            .menu,
+            .main,
+            .right {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bimg">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="https://codeforces.com/">HOME</a></li>
+                    <li><a href="https://codeforces.com/top">TOP</a></li>
+                    <li><a href="https://codeforces.com/contests">CONTESTS</a></li>
+                    <li><a href="https://codeforces.com/gyms">GYM</a></li>
+                    <li><a href="https://codeforces.com/problemset">PROBLEMSET</a></li>
+                    <li><a href="https://codeforces.com/groups">GROUPS</a></li>
+                    <li><a href="https://codeforces.com/ratings">RATING</a></li>
+                    <li><a href="https://codeforces.com/edu/courses">EDU</a></li>
+                    <li><a href="https://codeforces.com/apiHelp">API</a></li>
+                    <li><a href="https://codeforces.com/calendar">CALENDER</a></li>
+                    <li><a href="https://codeforces.com/help">HELP</a></li>
+                    <div class="search">
+                        <input type="text" name="search" id="search" placeholder="Search here">
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <section class="CF">
+            <div class="container">
+                <div class="hi">
+                    <h1>THE REALM OF CODE<span>FORCES</span></h1>
+                </div>
+            </div>
+        </section>
+        <div class="main-container">
+            <div class="search-container">
+                <input type="text" name="Username" id="input" class="input" placeholder="Codeforces Username" />
+                <button id="sc" class="sc" onclick="this.classList.toggle('sc--loading')"
+                    onclick="getFORCES()">
+                    <span class="sc--text">Search</span>
+                </button>
+            </div>
+            <div class="profile">
+                <div class="img-name">
+                    <img src="default.png" alt="" id="profile-img" class="img" /><br />
+                    <span class="name" id="name">Name</span><br />
+                    <a class="username" id="username">@username</a>
+                </div>
+                <p>
+                    Country: <span id="cou"></span>
+                    <br>
+                    Last Online: <span id="lo"></span>
+                    <br>
+                    Rank: <span id="ra"></span>
+                    <br>
+                    Contributions: <span id="contributions"></span>
+                    <br>
+                    Rating: <span id="rat"></span>
+                </p>
+            </div>
+        </div>
+        <script>
+            async function getFORCES() {
+                var username = document.getElementById('input').value;
+                const api_url = `https://codeforces.com/api/user.info?handles= ${username}`
+                const response = await fetch(api_url);
+                const data = await response.json();
+                const { titlePhoto, firstName, lastName, handle, country, lastOnlineTimeSeconds, maxRank, maxRating } = data;
+                document.getElementById('profile-img').src = data.result[0].titlePhoto;
+                document.getElementById('name').innerHTML = data.result[0].firstName + " " + data.result[0].lastName;
+                document.getElementById('username').innerHTML = data.result[0].handle;
+                document.getElementById('cou').innerHTML = data.result[0].country;
+                document.getElementById('lo').innerHTML = data.result[0].lastOnlineTimeSeconds;
+                document.getElementById('ra').innerHTML = data.result[0].maxRank;
+                document.getElementById('contributions').innerHTML = data.result[0].contribution;
+                document.getElementById('rat').innerHTML = data.result[0].maxRating;
+
+                console.log(data.result[0].titlePhoto);
+                console.log(data.result[0].firstName);
+                console.log(data.result[0].handle);
+                console.log(data.result[0].country);
+                console.log(data.result[0].lastOnlineTimeSeconds);
+                console.log(data.result[0].maxRank);
+                console.log(data.result[0].contribution);
+                console.log(data.result[0].maxRating);
+            }
+        </script>
+</body>
+
+</html>
