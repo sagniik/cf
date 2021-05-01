@@ -160,6 +160,10 @@
             font-weight: bold;
         }
 
+        .display{
+            display: none;
+        }
+
         .bimg {
             background-image: url("vecteezy_digital-cyberspace-with-digital-data-network-connections_1971012.jpg");
             background-color: #cccccc;
@@ -273,6 +277,7 @@
             </div>
         </div>
         <script>
+            document.querySelector('.profile').classList.add('display');
             async function getFORCES() {
                 var username = document.getElementById('input').value;
                 const api_url = `https://codeforces.com/api/user.info?handles= ${username}`
@@ -280,6 +285,7 @@
                 const data = await response.json();
                 const { titlePhoto, firstName, lastName, handle, country, lastOnlineTimeSeconds, maxRank, maxRating } = data;
                 document.querySelector('#sc').classList.remove('sc--loading');
+                document.querySelector('.profile').classList.remove('display');
                 document.getElementById('profile-img').src = data.result[0].titlePhoto;
                 document.getElementById('name').innerHTML = data.result[0].firstName + " " + data.result[0].lastName;
                 document.getElementById('username').innerHTML = data.result[0].handle;
