@@ -155,7 +155,6 @@
             font-family: 'Ubuntu Mono';
             overflow: hidden;
             color: white;
-            font-weight: 500;
             text-align: center;
             padding: 1em;
             font-weight: bold;
@@ -250,8 +249,7 @@
         <div class="main-container">
             <div class="search-container">
                 <input type="text" name="Username" id="input" class="input" placeholder="Codeforces Username" />
-                <button id="sc" class="sc" onclick="this.classList.toggle('sc--loading')"
-                    onclick="getFORCES()">
+                <button id="sc" class="sc" onclick="this.classList.toggle('sc--loading');getFORCES();">
                     <span class="sc--text">Search</span>
                 </button>
             </div>
