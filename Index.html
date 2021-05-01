@@ -249,7 +249,7 @@
         <div class="main-container">
             <div class="search-container">
                 <input type="text" name="Username" id="input" class="input" placeholder="Codeforces Username" />
-                <button id="sc" class="sc" onclick="this.classList.toggle('sc--loading');getFORCES();">
+                <button id="sc" class="sc" onclick="this.classList.add('sc--loading');getFORCES();">
                     <span class="sc--text">Search</span>
                 </button>
             </div>
@@ -279,6 +279,7 @@
                 const response = await fetch(api_url);
                 const data = await response.json();
                 const { titlePhoto, firstName, lastName, handle, country, lastOnlineTimeSeconds, maxRank, maxRating } = data;
+                document.querySelector('#sc').classList.remove('sc--loading');
                 document.getElementById('profile-img').src = data.result[0].titlePhoto;
                 document.getElementById('name').innerHTML = data.result[0].firstName + " " + data.result[0].lastName;
                 document.getElementById('username').innerHTML = data.result[0].handle;
